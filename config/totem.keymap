@@ -23,6 +23,8 @@
 // Source unicode-chars for desired languages
 #include "zmk-helpers/unicode-chars/german.dtsi"
 
+#include <locale/keys_de.h>
+
 #define BASE 0
 #define NAV  1
 #define SYM  2
