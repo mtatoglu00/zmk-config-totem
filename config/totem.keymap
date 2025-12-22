@@ -10,15 +10,6 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-#include "zmk-helpers/helper.h"
-
-// Source desired key-position labels
-
-#include "zmk-helpers/key-labels/totem.h"
-
-// Source unicode-chars for desired languages
-
-#include "zmk-helpers/unicode-chars/german.dtsi"
 #include <locale/keys_de.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -234,7 +225,7 @@
             bindings = <
            &kp GRAVE  &kp UNDER       &kp UP          &kp PLUS         &kp LBRC    &kp RBRC    &kp N7        &kp N8        &kp N9        &kp EQUAL
            &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LBKT    &kp RBKT    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
-&kp TILDE  &kp A      &kp PG_UP       &kp LG(DOWN)    &kp PG_DN        &kp LPAR    &kp RPAR    &kp NUMBER_1  &kp N2        &kp N3        &kp KP_MULTIPLY  &trans
+&kp TILDE  &kp DE_SHARP_S      &kp PG_UP       &kp LG(DOWN)    &kp PG_DN        &kp LPAR    &kp RPAR    &kp NUMBER_1  &kp N2        &kp N3        &kp KP_MULTIPLY  &trans
                                       &trans          &trans           &trans      &kp PERIOD  &kp N0        &kp KP_COMMA
             >;
         };
