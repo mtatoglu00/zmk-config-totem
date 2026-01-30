@@ -31,43 +31,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_esc {
-            timeout-ms = <60>;
-            key-positions = <0 1>;
-            bindings = <&kp TAB>;
-            require-prior-idle-ms = <120>;
-        };
-
-        dash {
-            bindings = <&kp MINUS>;
-            key-positions = <19 31>;
-            timeout-ms = <70>;
-        };
-
-        tilde_combo {
-            bindings = <&kp TILDE>;
-            key-positions = <0 20>;
-            timeout-ms = <60>;
-            require-prior-idle-ms = <100>;
-        };
-
-        enter_combo {
-            bindings = <&kp ENTER>;
-            key-positions = <13 12 11>;
-            timeout-ms = <70>;
-            require-prior-idle-ms = <100>;
-        };
-
-        enter_right_combo {
-            bindings = <&kp ENTER>;
-            key-positions = <16 18 17>;
-            timeout-ms = <70>;
-            require-prior-idle-ms = <100>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         mt_left: mt_left {
@@ -186,7 +150,25 @@
                                &kp Q                       &kp W                  &kp E            &kp R                    &kp T        &kp Y    &kp U                     &kp I             &kp O                   &kp P
                                &mt_shift_left RIGHT_ALT A  &mt_shift_left LALT S  &mt_left LGUI D  &mt_shift_left LSHIFT F  &kp G        &kp H    &mt_shift_right LSHIFT J  &mt_right LGUI K  &mt_shift_right LALT L  &mt_shift_right RIGHT_ALT DE_O_UMLAUT
 &mt_all LEFT_CONTROL CAPSLOCK  &kp Z                       &kp X                  &kp C            &kp V                    &kp B        &kp N    &kp M                     &kp DE_COMMA      &kp DE_DOT              &kp DE_MINUS                           &mt_all RCTRL DE_A_UMLAUT
-                                                                                  &kp BACKSPACE    &lt 1 ENTER              &kp SPACE    &kp TAB  &lt 2 DE_CARET            &kp DELETE
+                                                                                  &kp BACKSPACE    &lt 3 ENTER              &kp SPACE    &kp TAB  &lt 4 DE_CARET            &kp DELETE
+            >;
+        };
+
+        Colemak {
+            bindings = <
+                        &kp Q                       &kp W                      &kp F            &kp P                    &kp B        &kp J    &kp L                     &kp U             &kp Y                       &kp DE_U_UMLAUT
+                        &mt_shift_left RIGHT_ALT A  &mt_shift_left LEFT_ALT R  &mt_left LGUI S  &mt_shift_left LSHIFT T  &kp DE_G     &kp M    &mt_shift_right RSHIFT N  &mt_right RGUI E  &mt_shift_right LEFT_ALT I  &mt_shift_right RIGHT_ALT O
+&mt_all LCTRL CAPSLOCK  &kp Z                       &kp X                      &kp C            &kp D                    &kp V        &kp K    &kp H                     &kp COMMA         &kp DOT                     &kp DE_O_UMLAUT              &mt_all RCTRL DE_A_UMLAUT
+                                                                               &kp BACKSPACE    &lt 3 ENTER              &kp SPACE    &kp TAB  &lt 4 DE_CARET            &to 0
+            >;
+        };
+
+        Gaming {
+            bindings = <
+          &kp TAB     &kp Q     &kp W   &kp E   &kp R        &trans  &trans  &trans  &trans  &trans
+          &kp LSHIFT  &kp A     &kp S   &kp D   &kp F        &trans  &trans  &trans  &trans  &trans
+&kp CAPS  &kp LCTRL   &kp DE_Y  &kp X   &kp C   &kp V        &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &kp SPACE    &trans  &trans  &to 0
             >;
         };
 
@@ -232,27 +214,9 @@
 
             bindings = <
         &kp DE_EXCL   &kp DE_DQT        &kp DE_SECTION       &kp DE_DLLR                 &kp DE_PERCENT          &kp DE_AMPERSAND  &kp DE_SLASH                &kp DE_EQUAL  &kp DE_QUESTION  &kp DE_GRAVE
-        &kp DE_AT     &kp DE_LESS_THAN  &kp DE_GREATER_THAN  &mt_all LEFT_SHIFT DE_EURO  &to 4                   &kp C_VOL_DN      &mt_all RIGHT_SHIFT C_MUTE  &kp C_VOL_UP  &trans           &kp DE_ACUTE
-&trans  &kp DE_TILDE  &kp DE_PIPE       &to 3                &kp C_BRI_DEC               &kp C_BRIGHTNESS_INC    &kp C_PREV        &kp C_PP                    &kp C_NEXT    &kp PSCRN        &kp DE_APOS   &mt_all RCTRL DE_HASH
+        &kp DE_AT     &kp DE_LESS_THAN  &kp DE_GREATER_THAN  &mt_all LEFT_SHIFT DE_EURO  &to 2                   &kp C_VOL_DN      &mt_all RIGHT_SHIFT C_MUTE  &kp C_VOL_UP  &trans           &kp DE_ACUTE
+&trans  &kp DE_TILDE  &kp DE_PIPE       &to 1                &kp C_BRI_DEC               &kp C_BRIGHTNESS_INC    &kp C_PREV        &kp C_PP                    &kp C_NEXT    &kp PSCRN        &kp DE_APOS   &mt_all RCTRL DE_HASH
                                         &trans               &trans                      &mo 5                   &trans            &trans                      &trans
-            >;
-        };
-
-        Colemak {
-            bindings = <
-                        &kp Q                       &kp W                      &kp F            &kp P                    &kp B        &kp J    &kp L                     &kp U             &kp Y                       &kp DE_U_UMLAUT
-                        &mt_shift_left RIGHT_ALT A  &mt_shift_left LEFT_ALT R  &mt_left LGUI S  &mt_shift_left LSHIFT T  &kp DE_G     &kp M    &mt_shift_right RSHIFT N  &mt_right RGUI E  &mt_shift_right LEFT_ALT I  &mt_shift_right RIGHT_ALT O
-&mt_all LCTRL CAPSLOCK  &kp Z                       &kp X                      &kp C            &kp D                    &kp V        &kp K    &kp H                     &kp COMMA         &kp DOT                     &kp DE_O_UMLAUT              &mt_all RCTRL DE_A_UMLAUT
-                                                                               &kp BACKSPACE    &lt 1 ENTER              &kp SPACE    &kp TAB  &lt 2 DE_CARET            &to 0
-            >;
-        };
-
-        Gaming {
-            bindings = <
-          &kp TAB     &kp Q     &kp W   &kp E   &kp R        &trans  &trans  &trans  &trans  &trans
-          &kp LSHIFT  &kp A     &kp S   &kp D   &kp F        &trans  &trans  &trans  &trans  &trans
-&kp CAPS  &kp LCTRL   &kp DE_Y  &kp X   &kp C   &kp V        &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &kp SPACE    &trans  &trans  &to 0
             >;
         };
 
