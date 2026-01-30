@@ -240,9 +240,9 @@
 
         Colemak {
             bindings = <
-                        &kp Q                       &kp W                      &kp F            &kp P                    &kp B        &kp J    &kp L                     &kp U             &kp Y                       &kp DE_O_UMLAUT
+                        &kp Q                       &kp W                      &kp F            &kp P                    &kp B        &kp J    &kp L                     &kp U             &kp Y                       &kp DE_U_UMLAUT
                         &mt_shift_left RIGHT_ALT A  &mt_shift_left LEFT_ALT R  &mt_left LGUI S  &mt_shift_left LSHIFT T  &kp DE_G     &kp M    &mt_shift_right RSHIFT N  &mt_right RGUI E  &mt_shift_right LEFT_ALT I  &mt_shift_right RIGHT_ALT O
-&mt_all LCTRL CAPSLOCK  &kp Z                       &kp X                      &kp C            &kp D                    &kp V        &kp K    &kp H                     &kp COMMA         &kp DOT                     &kp LS(DE_U_UMLAUT)          &mt_all RCTRL DE_A_UMLAUT
+&mt_all LCTRL CAPSLOCK  &kp Z                       &kp X                      &kp C            &kp D                    &kp V        &kp K    &kp H                     &kp COMMA         &kp DOT                     &kp DE_O_UMLAUT              &mt_all RCTRL DE_A_UMLAUT
                                                                                &kp BACKSPACE    &lt 1 ENTER              &kp SPACE    &kp TAB  &lt 2 DE_CARET            &to 0
             >;
         };
